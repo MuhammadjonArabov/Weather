@@ -1,6 +1,6 @@
-# models.py
-from django.contrib.auth.models import AbstractUser, BaseUserManager
+from django.contrib.auth.models import AbstractUser, BaseUserManager, Permission, Group
 from django.db import models
+
 
 class UserManager(BaseUserManager):
     def create_user(self, username, name, surname, password=None, **extra_fields):
@@ -14,6 +14,12 @@ class UserManager(BaseUserManager):
     def create_superuser(self, username, name, surname, password=None, **extra_fields):
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
+
+        if extra_fields.get("is_staff") is not True:
+            raise ValueError("Superuser must have is_staff=True")
+        if extra_fields.get("is_superuser") is not True:
+            raise ValueError("Superuser must have is_superuser=True")
+
         return self.create_user(username, name, surname, password, **extra_fields)
 
 class User(AbstractUser):
@@ -22,6 +28,17 @@ class User(AbstractUser):
     username = models.CharField(max_length=150, unique=True)
     email = None
     objects = UserManager()
+
+    groups = models.ManyToManyField(
+        Group,
+        related_name='custom_user_groups',
+        blank=True
+    )
+    user_permissions = models.ManyToManyField(
+        Permission,
+        related_name='custom_user_permissions',
+        blank=True
+    )
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['name', 'surname']
