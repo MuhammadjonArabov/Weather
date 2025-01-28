@@ -41,7 +41,9 @@ class LoginSerializer(serializers.Serializer):
         attrs['user'] = user
         return attrs
 
+
 class WeatherDataSerializer(serializers.ModelSerializer):
     class Meta:
         model = WeatherData
-        fields = ['name', 'country', 'lat', 'lon', 'temp_c', 'temp_color', 'wind_kph', 'wind_color', 'cloud', 'cloud_color', 'created_at']
+        fields = ['name', 'country', 'lat', 'lon', 'temp_c', 'temp_color', 'wind_kph', 'wind_color', 'cloud',
+                  'cloud_color', 'created_at']

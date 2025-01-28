@@ -1,5 +1,4 @@
 import os
-
 from django.contrib.sites import requests
 from django.http import JsonResponse
 import requests
