@@ -39,11 +39,8 @@ After the project is launched, check the work by visiting the following URLs:
 ```bash
 https://2ynd74-8000.csb.app/redoc/
 ```
-Back in the terminal, we create a super user
-```bash
-python manage.py createsuperuser
-```
-We enter our created user information.
+
+Username: admin  .    Password: 1
 ```bash
 https://2ynd74-8000.csb.app/admin/
 ```
