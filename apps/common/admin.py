@@ -3,7 +3,7 @@ from .models import User, WeatherData
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'surname', 'username')
+    list_display = ('id', 'name', 'surname', 'username', 'is_staff', 'is_active')
     search_fields = ('name', 'surname', 'username')
 
 @admin.register(WeatherData)
