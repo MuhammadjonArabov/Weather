@@ -42,11 +42,11 @@ https://73y5vr-8000.csb.app//redoc/
 
 Username: admin  .    Password: 1
 ```bash
-https://73y5vr-8000.csb.app//admin/
+https://73y5vr-8000.csb.app/admin/
 ```
 Register API
 ```bash
-https://73y5vr-8000.csb.app//api/v1/common/register/
+https://73y5vr-8000.csb.app/api/v1/common/register/
 ```
 ```bash
 {
