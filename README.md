@@ -25,7 +25,7 @@ We install libraries
 ```bash
 pip install -r requarments.txt
 ```
-We create a .env package and copy all the code from .env.example and fill in our PostgreSQL data.
+We create a .env package and copy all the code from .env.example and fill in our PostgresSQL data.
 We run the migration
 ```bash
 python manage.py makemigrations
@@ -48,11 +48,28 @@ Register API
 ```bash
 https://2ynd74-8000.csb.app/api/v1/common/register/
 ```
+```bash
+{
+  "name": "string",
+  "surname": "string",
+  "username": "string",
+  "password": "string"
+}
+```
+
+
 Login API
 ```bash
 https://2ynd74-8000.csb.app/api/v1/common/login/
 ```
+```bash
+{
+  "username": "string",
+  "password": "string"
+}
+```
 Weather API - You can get weather information by replacing Tashkent with the name of the country or city you want.
+Before sending a request, you must log in to the admin panel as a registered user.
 ```bash
 https://2ynd74-8000.csb.app/api/v1/common/weather/?q=Tashkent
 ```
