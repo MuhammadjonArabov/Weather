@@ -37,16 +37,16 @@ python manage.py runserver
 ```
 After the project is launched, check the work by visiting the following URLs:
 ```bash
-https://2ynd74-8000.csb.app/redoc/
+https://73y5vr-8000.csb.app//redoc/
 ```
 
 Username: admin  .    Password: 1
 ```bash
-https://2ynd74-8000.csb.app/admin/
+https://73y5vr-8000.csb.app//admin/
 ```
 Register API
 ```bash
-https://2ynd74-8000.csb.app/api/v1/common/register/
+https://73y5vr-8000.csb.app//api/v1/common/register/
 ```
 ```bash
 {
@@ -60,7 +60,7 @@ https://2ynd74-8000.csb.app/api/v1/common/register/
 
 Login API
 ```bash
-https://2ynd74-8000.csb.app/api/v1/common/login/
+https://73y5vr-8000.csb.app/api/v1/common/login/
 ```
 ```bash
 {
@@ -71,7 +71,7 @@ https://2ynd74-8000.csb.app/api/v1/common/login/
 Weather API - You can get weather information by replacing Tashkent with the name of the country or city you want.
 Before sending a request, you must log in to the admin panel as a registered user.
 ```bash
-https://2ynd74-8000.csb.app/api/v1/common/weather/?q=Tashkent
+https://73y5vr-8000.csb.app/api/v1/common/weather/?q=Tashkent
 ```
 Result
 ```bash
